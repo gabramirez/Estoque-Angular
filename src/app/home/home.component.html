@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <app-estoque-form [estoque]="estoque" (saveEstoque)="saveEstoque($event)"></app-estoque-form>
+    </div>
+    <div class="col-md-7" style="margin-top: 10px">
+      <app-estoque-list [estoques]="estoques" (editEstoque)="edit($event)" (deleteEstoque)="delete($event)">
+      </app-estoque-list>
+    </div>
+  </div>
+</div>

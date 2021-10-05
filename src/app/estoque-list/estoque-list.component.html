@@ -1,0 +1,28 @@
+<table class="table table-striped">
+
+  <tr class="table-primary">
+    <th>marca</th>
+    <th>Modelo</th>
+    <th>Placa Mãe</th>
+    <th>Memória</th>
+    <th>HD marca</th>
+    <th>Processador</th>
+    <th>Foto</th>
+  </tr>
+
+  <tr *ngFor="let estoque of estoques">
+    <td>{{estoque.marca}}</td>
+    <td>{{estoque.modelo}}</td>
+    <td>{{estoque.placamae}}</td>
+    <td>{{estoque.memoria}}</td>
+    <td>{{estoque.hdmarca}}</td>
+    <td>{{estoque.processador}}</td>
+    <td><td><img src="{{estoque.foto}}" alt="{{estoque.foto}}" width="100px"></td>
+    <td>
+      <button class="btn btn-primary" (click)="edit(estoque)"><i class="fas fa-edit">.</i>
+      </button>
+      <button class="btn btn-danger" (click)="delete(estoque)"><i class="far fa-trash-alt">.</i>
+      </button>
+    </td>
+  </tr>
+</table>
